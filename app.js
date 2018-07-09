@@ -1,19 +1,18 @@
-const app = {
+let app = {
     todos: [],
     displayTodos: () => {
-        console.log(this.todos);
+        console.log(app.todos);
     },
     addTodo: (todo) => {
-        this.todos.push(todo);
-        this.displayTodos();
+        app.todos.push(todo);
+        app.displayTodos();
     },
     deleteTodo: (index) => {
-        this.todos.splice(index, 1);
-        this.displayTodos();
+        app.todos.splice(index, 1);
+        app.displayTodos();
     },
     changeTodo: (index, todo) => {
-        this.todos.splice(index, 1, todo);
-        this.displayTodos();
+        app.todos.splice(index, 1, todo);
+        app.displayTodos();
     }
 };
-
